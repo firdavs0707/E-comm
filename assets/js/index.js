@@ -22,7 +22,8 @@ const cashout = document.querySelector(".items-cash")
 const tot = document.querySelector(".tot")
   let ful = false;
 btnBuy.addEventListener("click", () => {
-  modal.close();
+  if (Number(total.textContent) > 0) {
+    modal.close();
   modal.classList.remove("bl");
   box.showModal();
   box.classList.add("show");
@@ -41,9 +42,14 @@ btnBuy.addEventListener("click", () => {
   }, 0);
   console.log(typeof rexr);
   tot.textContent = ful ? (rexr - 50).toFixed(2) : rexr.toFixed(2) + ' $';
+  } else {
+    alert('Your cart is empty!')
+  }
   con.addEventListener("click", () => {
     box.classList.remove("show");
     box.close()
+    cashout.textContent = ''
+    total.textContent = ''
     Cart = [];
     count.textContent = 0;
   });
