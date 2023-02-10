@@ -24,6 +24,7 @@ const tot = document.querySelector(".tot")
 btnBuy.addEventListener("click", () => {
   if (Number(total.textContent) > 0) {
     modal.close();
+    h2.textContent = ''
   modal.classList.remove("bl");
   box.showModal();
   box.classList.add("show");
@@ -42,8 +43,8 @@ btnBuy.addEventListener("click", () => {
   }, 0);
   console.log(typeof rexr);
   tot.textContent = ful ? (rexr - 50).toFixed(2) : rexr.toFixed(2) + ' $';
-  } else {
-    alert('Your cart is empty!')
+} else {
+  alert('Your cart is empty!')
   }
   con.addEventListener("click", () => {
     box.classList.remove("show");
@@ -54,6 +55,7 @@ btnBuy.addEventListener("click", () => {
     count.textContent = 0;
   });
 });
+let h2 = document.createElement("h2");
 
 btnpro.addEventListener("click", () => {
   modalpro.showModal();
@@ -62,7 +64,6 @@ btnpro.addEventListener("click", () => {
     if (inputpro.value === "SALOM") {
       if (Number(total.textContent) > 150) {
         ful = true;
-        let h2 = document.createElement("h2");
         let num = Number(total.textContent);
         h2.textContent = (num - 50).toFixed(1);
         total.classList.add("dell");
