@@ -1,0 +1,402 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0 solid transparent;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1;
+  text-rendering: optimizeSpeed;
+  background-color: blueviolet;
+}
+
+.totals {
+  display: flex;
+  width: 150px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.total {
+  padding: 0px 10px;
+}
+
+.container {
+  max-width: 1560px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+header {
+  padding: 10px 30px; 
+  margin-bottom: 30px;
+}
+
+.head-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.head-wrapper > div:last-child {
+  position: relative;
+  width: 65px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.head-wrapper > div:last-child > span {
+  position: absolute;
+  top: -10px;
+  right: -15px;
+  background-color: red;
+  padding: 5px 8px;
+  border-radius: 50%;
+}
+
+.head-wrapper > div:last-child > h3 {
+  color: #fff;
+}
+
+.cart-btn {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cart-btn:hover {
+  transform: scale(1.1);
+}
+
+.head-wrapper>div:last-child>h3 {
+  margin-top: 5px;
+}
+
+.input {
+  height: 35px;
+  background-color: transparent;
+  padding-left: 30px;
+  border-bottom: 2px solid rgb(255, 255, 255);
+  padding: 10px 30px;
+  outline: none;
+  color: #fff;
+  font-size: 17px;
+}
+
+.output {
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 30px;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.list {
+  backdrop-filter: blur(50px);
+  box-shadow: 10px 10px 10px rgba(44, 44, 44, 0.9);
+  list-style: none;
+  gap: 10px;
+  color: #fff;
+  text-transform: capitalize;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.active-item{
+  background-color: rgb(4, 0, 255);
+}
+
+.prices {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.btn-buy {
+  width: 100px;
+  height: 30px;
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.btn-buy:hover {
+  background-color: rgb(170, 0, 255);
+}
+
+.price {
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+}
+
+.item {
+  padding: 10px;
+}
+
+.title {
+  margin-top: 10px;
+  color: #fff;
+}
+
+.product {
+  padding: 20px;
+  width: 300px;
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.item:hover {
+  cursor: pointer;
+  border: 2px solid rgb(193, 8, 125);
+  padding: 8px;
+}
+
+.input::placeholder {
+  color: white;
+}
+
+.modal {
+  display: none;
+  margin: auto;
+  height: 95vh;
+  position: relative;
+  flex-direction: column;
+  width: 100%;
+  z-index: 900;
+}
+
+.modal-pro {
+  display: none;
+  margin: auto;
+  width: 500px;
+  height: 400px;
+  background-color: #5c5c5c;
+}
+
+.modal-pro::backdrop {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.bll {
+  display: block;
+}
+
+.input-pro{
+  width: 300px;
+  height: 50px;
+  font-size: 22px;
+  background-image: linear-gradient(90deg, blueviolet 30%, rgba(9, 9, 121, 1) 95%);
+  color: white;
+  padding-left: 20px;
+  margin-left: 50px;
+  outline: none;
+}
+
+.dell {
+  padding: 0px 10px;
+  text-decoration: line-through;
+}
+
+.box {
+  z-index: 999;
+  width: 400px;
+  display: block;
+  margin: auto;
+  display: none;
+  padding: 20px 50px;
+}
+
+.text-center {
+  text-align: center;
+  margin: 10px auto;
+  display: block;
+}
+
+.wrapper-cash {
+  width: 100%;
+}
+
+.box::backdrop {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.continue {
+    width: 300px;
+    height: 50px;
+    font-size: 22px;margin: 30px auto;
+    background-image: linear-gradient(90deg, blueviolet 50%, rgba(9, 9, 121, 1) 100%);
+    color: white;
+    cursor: pointer;
+}
+
+.show {
+  display: flex;
+}
+
+.text-pro {
+  color: white;
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 50px;
+  line-height: 30px;
+  padding: 0px 50px;
+}
+
+.btn-promo{
+  margin-left: -15px;
+  width:100px;
+  height: 50px;
+  font-size: 22px;
+  background-color: rgba(9, 9, 121, 1);
+  color: white;
+  cursor: pointer;
+}
+
+.input-pro::placeholder {
+  color: white;
+}
+
+.header-pro {
+  color: #fff;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.modal-promokod {
+  color: #fff;
+  background-color: blueviolet;
+  padding: 10px 30px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.buy-cart {
+  color: #fff;
+  background-color: rgb(84, 22, 209);
+  padding: 10px 30px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.bl {
+  display: flex;
+}
+
+.modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.delete {
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.plus {
+  font-size: 20px;
+  padding: 5px;
+  background-color: green;
+  color: #fff;
+  cursor: pointer;
+}
+.minus {
+  font-size: 20px;
+  padding: 5px;
+  width: 23px;
+  background-color: rgb(128, 0, 23);
+  color: #fff;
+  cursor: pointer;
+}
+
+.divsi {
+  width: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list-cart {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.close {
+  display: flex;
+  justify-content: end;
+  cursor: pointer;
+  padding: 20px;
+}
+
+.close-pro {
+  display: flex;
+  justify-content: end;
+  cursor: pointer;
+  padding: 20px;
+}
+
+.cash-ite {
+  display: 100%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.suu {
+  position: absolute;
+  bottom: calc(50% - 400px);
+  padding: 10px 30px;
+  width: 650px;
+  right: 30px;
+  display: flex;
+  align-self: center;
+  justify-content: space-between;
+}
+
+.item-cart {
+  padding: 10px 30px;
+  margin-top: 30px;
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+
+.divsu>img {
+  position: absolute;
+  z-index: 999;
+
+}
+
+.divsu {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.bg {
+  background-image: url('../img/background.gif');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 108vh;
+}
