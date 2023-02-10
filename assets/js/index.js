@@ -135,6 +135,9 @@ const DeleteItem = (id) => {
   Cart = Cart.filter((item) => item.id !== id);
   count.textContent = Number(count.textContent) - 1;
   renderCart();
+  if (Cart.length == 0) {
+    total.textContent = "";
+  }
 };
 
 const AddItem = (id) => {
@@ -178,8 +181,7 @@ const addToCart = async (id) => {
       } else {
         for (let pro of Cart) {
           if (pro.id == item.id) {
-            pro.count = pro.count + 1;
-            console.log(pro.count);
+            pro.count++;
           }
         }
       }

@@ -14,6 +14,10 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+.appen > h2 {
+  margin-left: 10px;
+}
+
 body {
   min-height: 100vh;
   line-height: 1;
